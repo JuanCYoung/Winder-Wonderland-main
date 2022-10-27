@@ -14,7 +14,7 @@ public class cameraMove : MonoBehaviour
         Camera();
     }
 
-    private void Camera()
+    public void Camera()
     {
         Vector3 Player = player.position + offset;
         Vector3 smooth = Vector3.Lerp(transform.position, Player, smoothcamera * Time.fixedDeltaTime);

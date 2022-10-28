@@ -7,12 +7,15 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    Collider2D coll;
 
     [SerializeField] bool isGrounded;
     [SerializeField] Transform groundCheckPoint;
     [SerializeField] LayerMask groundlayer;
     [SerializeField] Transform wallCheckPoint;
     [SerializeField] LayerMask walllayer;
+    [SerializeField] LayerMask ground;
+    [SerializeField] LayerMask wall;
 
     private float horizontalValue;
     public float moveSpeed, JumpForce, slidefactor;
@@ -30,6 +33,7 @@ public class Player : MonoBehaviour
         avaliablejump = totalJump;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        coll = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -64,8 +68,9 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-       /* //mengatur nilai xspeed berdasar nilai x rb
-        anim.SetFloat("xspeed", Mathf.Abs(rb.velocity.x));*/
+
+        //mengatur nilai xspeed berdasar nilai x rb
+        anim.SetFloat("xspeed", Mathf.Abs(rb.velocity.x));
     }
 
     void GroundCheck()
@@ -88,7 +93,18 @@ public class Player : MonoBehaviour
             if (wasGrounded)
                 StartCoroutine(JumpDelay());
         }
-        
+
+        if (coll.IsTouchingLayers(wall))
+        {
+            anim.SetBool("grab", true);
+        }
+
+        // jika tidak di ground animasi lompat = true;
+        if (!coll.IsTouchingLayers(wall))
+        {
+            anim.SetBool("grab", false);
+        }
+
     }
 
     void wallCheck()
@@ -161,16 +177,19 @@ public class Player : MonoBehaviour
         }
 
         // jika masih di ground animasi lompat = false
-     /*   if (coll.IsTouchingLayers(ground))
+        if (coll.IsTouchingLayers(ground) || coll.IsTouchingLayers(wall))
         {
             anim.SetBool("jump", false);
         }
 
         // jika tidak di ground animasi lompat = true;
-        if (!coll.IsTouchingLayers(ground))
+        if (!coll.IsTouchingLayers(ground) && !coll.IsTouchingLayers(wall))
         {
             anim.SetBool("jump", true);
-        }*/
+        }
+
+        //mengatur nilai xspeed berdasar nilai y rb
+        anim.SetFloat("yspeed", rb.velocity.y);
 
     }
 

@@ -11,11 +11,21 @@ public class FallingTree1 : MonoBehaviour
     {
         treeRb = GetComponent<Rigidbody2D>();
         treeRb.AddForce(Vector2.left * dropforce, ForceMode2D.Impulse);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            treeRb.bodyType = RigidbodyType2D.Static;
+        }
+    }
+
 }

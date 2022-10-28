@@ -21,6 +21,8 @@ public class Respawn : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Static;
             restart();  
         }
+
+        
     }
 
     private void restart()

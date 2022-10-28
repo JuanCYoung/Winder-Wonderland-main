@@ -34,4 +34,6 @@ public class TreeHealth : MonoBehaviour
     {
         Instantiate(treeDrop,transform.position + new Vector3(2, 0,0),Quaternion.identity);
     }
+
+
 }

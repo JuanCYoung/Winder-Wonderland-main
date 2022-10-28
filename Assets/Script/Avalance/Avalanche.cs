@@ -17,9 +17,11 @@ public class Avalanche : MonoBehaviour
       rb.MovePosition(rb.position +  new Vector2(forwardMovementSpeed * Time.fixedDeltaTime, movement.y * moveSpeed * Time.fixedDeltaTime));
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-      if(other.gameObject.tag == "Terrain"){
-        Destroy(other.gameObject);
-      }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Terrain")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

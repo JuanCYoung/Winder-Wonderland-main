@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    AudioSource Music;
     Collider2D coll;
 
     [SerializeField] bool isGrounded;
@@ -27,6 +28,9 @@ public class Player : MonoBehaviour
     private bool jumpdelay;
     private bool multiplejump;
     private bool isGrabing;
+    private bool IsMoving = false;
+   
+    
     // Start is called before the first frame update
     private void Awake()
     {
@@ -34,11 +38,14 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        Music = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         horizontalValue = Input.GetAxisRaw("Horizontal");
         lompat();
         wallCheck();
@@ -55,6 +62,23 @@ public class Player : MonoBehaviour
 
         //vector2 buat rb
         rb.velocity = new Vector2(dir * moveSpeed, rb.velocity.y);
+        if (dir != 0){
+            IsMoving = true;
+        } 
+        else
+        {
+            IsMoving = false;
+        }
+
+        if (IsMoving && coll.IsTouchingLayers(ground))
+        {
+            if(!Music.isPlaying)
+            Music.Play();
+        }
+        else
+        {
+            Music.Stop();
+        }
 
         //flip kiri 
         if (facingRigth && dir < 0)
@@ -65,7 +89,7 @@ public class Player : MonoBehaviour
         //flip kanan
         if (!facingRigth && dir > 0)
         {
-            Flip();
+            Flip();       
         }
 
 
@@ -85,6 +109,8 @@ public class Player : MonoBehaviour
             {
                 avaliablejump = totalJump;
                 multiplejump = false;
+
+                Audio.instance.PlaySFX("landing");
                 
             }
         }
@@ -147,12 +173,14 @@ public class Player : MonoBehaviour
         //tekan spasi dan menyentuh layer ground = lompat
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            
             if (isGrounded)
             {
                 multiplejump = true;
                 avaliablejump--;
                 //perpindahan vector 2 y.
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                Audio.instance.PlaySFX("jump");
             }
 
             //menjalankan fungsi jumpdelay
@@ -164,6 +192,7 @@ public class Player : MonoBehaviour
                     avaliablejump--;
                     //perpindahan vector 2 y.
                     rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                    Audio.instance.PlaySFX("jump");
                 }
 
                 if (multiplejump && avaliablejump >0)
@@ -171,6 +200,7 @@ public class Player : MonoBehaviour
                     avaliablejump--;
                     //perpindahan vector 2 y.
                     rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                    Audio.instance.PlaySFX("jump");
                 }
                 
             }

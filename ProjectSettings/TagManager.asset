@@ -8,6 +8,7 @@ TagManager:
   - WeakPoint
   - Trap
   - Wall
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - UI
   - Player
   - wall
-  - 
-  - 
-  - 
+  - UI Very Behind
+  - Avalanche
+  - Tree
   - 
   - 
   - 
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Tree2
     uniqueID: 1407616205
+    locked: 0
+  - name: Avalanche
+    uniqueID: 3593090241
     locked: 0

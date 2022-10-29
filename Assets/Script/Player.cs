@@ -11,27 +11,30 @@ public class Player : MonoBehaviour
     Collider2D coll;
    
 
-    [SerializeField] bool isGrounded;
+ 
     [SerializeField] Transform groundCheckPoint;
-    [SerializeField] LayerMask groundlayer;
     [SerializeField] Transform wallCheckPoint;
+    [SerializeField] LayerMask groundlayer;
     [SerializeField] LayerMask walllayer;
     [SerializeField] LayerMask ground;
     [SerializeField] LayerMask wall;
     [SerializeField] Gameover gameover;
 
     private float horizontalValue;
+    public float fallmultiplier = 6f;
+    public float lowjumpfallmultiplier = 5f;
     public float moveSpeed, JumpForce, slidefactor;
-    private bool facingRigth = true;
-    public int totalJump;
-    public int avaliablejump;
     const float groundCheckRadius = 0.2f;
     const float wallCheckRadius = 0.2f;
+    public int totalJump;
+    public int avaliablejump;
+    private int poin;
+    private bool facingRigth = true;
     private bool jumpdelay;
     private bool multiplejump;
     private bool isGrabing;
+    private bool isGrounded;
     private bool IsMoving = false;
-    private int poin;
    
     
     // Start is called before the first frame update
@@ -58,6 +61,7 @@ public class Player : MonoBehaviour
     {
         Movement(horizontalValue);
         GroundCheck();
+        fallMultiplier();
     }
 
     void Movement(float dir)
@@ -182,7 +186,8 @@ public class Player : MonoBehaviour
                 multiplejump = true;
                 avaliablejump--;
                 //perpindahan vector 2 y.
-                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+                rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
                 Audio.instance.PlaySFX("jump");
             }
 
@@ -224,6 +229,21 @@ public class Player : MonoBehaviour
         //mengatur nilai xspeed berdasar nilai y rb
         anim.SetFloat("yspeed", rb.velocity.y);
 
+    }
+
+    private void fallMultiplier()
+    {
+        if (rb.velocity.y < 0)
+        {
+            rb.gravityScale = fallmultiplier;
+        }
+        else if(rb.velocity.y > 0 && Input.GetKeyDown(KeyCode.Space)){
+            rb.gravityScale = lowjumpfallmultiplier;
+        }
+        else
+        {
+            rb.gravityScale = 1f;
+        }
     }
 
     IEnumerator JumpDelay()

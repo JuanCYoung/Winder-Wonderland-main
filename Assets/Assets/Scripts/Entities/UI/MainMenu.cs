@@ -8,4 +8,20 @@ public class MainMenu : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("Main Menu 1");
+    }
+
+    public void credit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
 }

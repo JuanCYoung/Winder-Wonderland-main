@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7256715179370873879}
   - component: {fileID: 7256715179370874088}
   - component: {fileID: 7256715179370873878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trees_1
   m_TagString: WeakPoint
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7256715179370874091}
   m_LocalRotation: {x: 0.033497244, y: 0.020145908, z: -0.00067534874, w: 0.9992355}
   m_LocalPosition: {x: 108.9, y: 3.7, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7256715180621052379}
@@ -74,10 +74,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1400797661
-  m_SortingLayer: 1
+  m_SortingLayerID: 1407616205
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 259fb4a956624c14ebf037cbc8e49562, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0bfe8b3e82482749b19efb91d927c1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!50 &7256715179370873879
 Rigidbody2D:
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.61, y: 7.9418607}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 3.61, y: 7.9418607}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7256715180621052379}
   - component: {fileID: 3169821667367356719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

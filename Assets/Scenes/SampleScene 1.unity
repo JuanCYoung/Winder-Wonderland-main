@@ -15485,6 +15485,64 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.011759, y: 3.4629273}
   m_EdgeRadius: 0
+--- !u!1 &342394195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342394196}
+  - component: {fileID: 342394197}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &342394196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342394195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545937169}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &342394197
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342394195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.35138032, y: 0.15213019}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.29723936, y: 0.6957396}
+  m_EdgeRadius: 0
 --- !u!1 &412398131
 GameObject:
   m_ObjectHideFlags: 0
@@ -15499,7 +15557,7 @@ GameObject:
   - component: {fileID: 412398134}
   - component: {fileID: 412398133}
   - component: {fileID: 412398132}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: Avalance (2)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -15585,8 +15643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7165abdfdf5e4b8010d9cd7a424e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  forwardMovementSpeed: 3
+  moveSpeed: 3
+  forwardMovementSpeed: 2
   rb: {fileID: 0}
 --- !u!212 &412398136
 SpriteRenderer:
@@ -15626,8 +15684,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -701877055
+  m_SortingLayer: 3
   m_SortingOrder: 384
   m_Sprite: {fileID: 21300000, guid: 6639c495a57078a4ab1948e1320512f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -20588,7 +20646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720109144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LauchPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20990,7 +21048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183835402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21026,7 +21084,7 @@ GameObject:
   - component: {fileID: 1242130903}
   - component: {fileID: 1242130902}
   - component: {fileID: 1242130901}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: Avalance (1)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -21112,8 +21170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7165abdfdf5e4b8010d9cd7a424e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  forwardMovementSpeed: 3
+  moveSpeed: 3
+  forwardMovementSpeed: 2
   rb: {fileID: 0}
 --- !u!212 &1242130905
 SpriteRenderer:
@@ -21153,8 +21211,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -701877055
+  m_SortingLayer: 3
   m_SortingOrder: 383
   m_Sprite: {fileID: 21300000, guid: 6639c495a57078a4ab1948e1320512f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -21353,7 +21411,7 @@ GameObject:
   - component: {fileID: 1267133736}
   - component: {fileID: 1267133737}
   - component: {fileID: 1267133738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21420,7 +21478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267133729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.46, y: 1.9, z: 0}
+  m_LocalPosition: {x: 140.62, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21711,7 +21769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371496976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22233,7 +22291,7 @@ GameObject:
   - component: {fileID: 1545937170}
   - component: {fileID: 1545937171}
   - component: {fileID: 1545937172}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: Avalance
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -22293,8 +22351,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -701877055
+  m_SortingLayer: 3
   m_SortingOrder: 383
   m_Sprite: {fileID: 21300000, guid: 6639c495a57078a4ab1948e1320512f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -22318,7 +22376,8 @@ Transform:
   m_LocalPosition: {x: -8.6, y: 1.58, z: 1}
   m_LocalScale: {x: 24, y: 24, z: 16.188833}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 342394196}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22356,7 +22415,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21030563, y: -0.113531284}
+  m_Offset: {x: -0.21030563, y: -0.103819475}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22367,7 +22426,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2670579, y: 0.117531344}
+  m_Size: {x: 0.2670579, y: 0.16084269}
   m_EdgeRadius: 0
 --- !u!95 &1545937172
 Animator:
@@ -23523,7 +23582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256715179370874090, guid: 711bde0c4d5f5004883c9ed35f7f407b, type: 3}
       propertyPath: m_MaskInteraction
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256715179370874091, guid: 711bde0c4d5f5004883c9ed35f7f407b, type: 3}
       propertyPath: m_Name
@@ -23531,11 +23590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256715179370874091, guid: 711bde0c4d5f5004883c9ed35f7f407b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256715180621052380, guid: 711bde0c4d5f5004883c9ed35f7f407b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 711bde0c4d5f5004883c9ed35f7f407b, type: 3}

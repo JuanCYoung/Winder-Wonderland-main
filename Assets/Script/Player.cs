@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Animator anim;
     AudioSource Music;
     Collider2D coll;
-    Gameover gameover;
+   
 
     [SerializeField] bool isGrounded;
     [SerializeField] Transform groundCheckPoint;
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask walllayer;
     [SerializeField] LayerMask ground;
     [SerializeField] LayerMask wall;
+    [SerializeField] Gameover gameover;
 
     private float horizontalValue;
     public float moveSpeed, JumpForce, slidefactor;

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Animator anim;
     AudioSource Music;
     Collider2D coll;
+    Gameover gameover;
 
     [SerializeField] bool isGrounded;
     [SerializeField] Transform groundCheckPoint;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     private bool multiplejump;
     private bool isGrabing;
     private bool IsMoving = false;
+    private int poin;
    
     
     // Start is called before the first frame update
@@ -231,5 +233,31 @@ public class Player : MonoBehaviour
         jumpdelay = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "item")
+        {
+            // jika menyentuh maka object akan hancur dan gem bertambah 1
+            Destroy(collision.gameObject);
+            Audio.instance.PlaySFX("item");
+            poin += 1;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D player)
+    {
+        if (player.gameObject.CompareTag("Trap"))
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            GameOver();
+        }
+
+
+    }
+
+    private void GameOver()
+    {
+        gameover.Setup(poin);
+    }
 
 }

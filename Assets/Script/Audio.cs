@@ -11,7 +11,7 @@ public class Audio : MonoBehaviour
         instance = this;
     }
     /* public List<AudioClip> sfxLibrary;*/
-    public AudioClip sfx_landing, sfx_jump, sfx_run, sfx_shoot, sfx_hit, sfx_treefaling;
+    public AudioClip sfx_landing, sfx_jump, sfx_run, sfx_shoot, sfx_hit, sfx_treefaling, sfx_item;
     public AudioClip music_ost;
 
     public GameObject soundObject;
@@ -37,6 +37,9 @@ public class Audio : MonoBehaviour
                 break;
             case "treefaling":
                 Sound(sfx_treefaling);
+                break;
+            case "item":
+                Sound(sfx_item);
                 break;
             default:
                 break;

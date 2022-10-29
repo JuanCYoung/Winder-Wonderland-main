@@ -10,6 +10,9 @@ TagManager:
   - Wall
   - Terrain
   - item
+  - Switch
+  - Interacable
+  - Penahan
   layers:
   - Default
   - TransparentFX
@@ -22,10 +25,10 @@ TagManager:
   - UI Very Behind
   - Avalanche
   - Tree
-  - 
-  - 
-  - 
-  - 
+  - InteracCircle
+  - Lever
+  - Penahan
+  - PohonJatuh
   - 
   - 
   - 

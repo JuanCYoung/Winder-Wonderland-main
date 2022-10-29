@@ -20962,8 +20962,9 @@ MonoBehaviour:
   sfx_landing: {fileID: 8300000, guid: 7029a1b4a6bd2904aadab213078b9b11, type: 3}
   sfx_jump: {fileID: 8300000, guid: b8e74e00765e4b74b8a316e968196f7f, type: 3}
   sfx_run: {fileID: 8300000, guid: 0067ad093c353d149b120ddb8bf09374, type: 3}
-  sfx_shoot: {fileID: 0}
-  sfx_grab: {fileID: 0}
+  sfx_shoot: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  sfx_hit: {fileID: 8300000, guid: 9b2f4073ff1a94e59b8f22a753534eb6, type: 3}
+  sfx_treefaling: {fileID: 8300000, guid: c003061aed25f964daffc8694acc61c9, type: 3}
   music_ost: {fileID: 8300000, guid: 390d582be18d76f4b9f309d19b17b58e, type: 3}
   soundObject: {fileID: 4086371316558833538, guid: 2d3bb64b06d975249b6896d750dd5bc9, type: 3}
 --- !u!4 &1155654046
@@ -21420,7 +21421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267133729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.46, y: 1.9, z: 0}
+  m_LocalPosition: {x: 91.6, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22233,6 +22234,7 @@ GameObject:
   - component: {fileID: 1545937170}
   - component: {fileID: 1545937171}
   - component: {fileID: 1545937172}
+  - component: {fileID: 1545937173}
   m_Layer: 1
   m_Name: Avalance
   m_TagString: Trap
@@ -22389,6 +22391,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &1545937173
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545937166}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8fb4528df04763f4aa770f43b9613dbe, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.489
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1593147223
 GameObject:
   m_ObjectHideFlags: 0

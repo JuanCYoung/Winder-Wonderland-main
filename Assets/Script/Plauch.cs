@@ -25,6 +25,7 @@ public class Plauch : MonoBehaviour
         {
             anim.SetBool("tembak", true);
             StartCoroutine(WaitShoot());
+            Audio.instance.PlaySFX("shoot");
             shootCounter = shootTime;
         }
         shootCounter -= Time.deltaTime;

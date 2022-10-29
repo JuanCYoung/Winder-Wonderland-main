@@ -29,6 +29,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "WeakPoint"){
+            Audio.instance.PlaySFX("hit");
             other.gameObject.GetComponent<TreeHealth>().TakeDamage(1);
         }
         Destroy(gameObject);

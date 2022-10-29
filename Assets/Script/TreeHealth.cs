@@ -33,6 +33,7 @@ public class TreeHealth : MonoBehaviour
     private void TreeDrop()
     {
         Instantiate(treeDrop,transform.position + new Vector3(2, 0,0),Quaternion.identity);
+        Audio.instance.PlaySFX("treefaling");
     }
 
 

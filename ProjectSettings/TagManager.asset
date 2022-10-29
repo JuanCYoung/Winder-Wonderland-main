@@ -13,6 +13,7 @@ TagManager:
   - Switch
   - Interacable
   - Penahan
+  - GroundSS
   layers:
   - Default
   - TransparentFX
